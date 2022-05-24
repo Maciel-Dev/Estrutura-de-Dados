@@ -46,6 +46,11 @@ Lista appendLista(Lista lst, tdado dado){
 
     return lst;
 }
+
+tdado dadoLista(Lista lst, int pos){
+    //Tarefa
+}
+
 int lenLista(Lista lst){
     return lst->tamanho;
 }
