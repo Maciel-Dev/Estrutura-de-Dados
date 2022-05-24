@@ -27,6 +27,7 @@ Lista appendLista(Lista lst, tdado dado);
 int lenLista(Lista lst);
 tdado primLista(Lista lst);
 tdado ultLista(Lista lst);
+tdado dadoLista(Lista lst, int pos);
 int indexLista(Lista lst, tdado dado);
 Lista clearLista(Lista lst);
 Lista insertLista(Lista lst, int pos, tdado dado);
