@@ -21,14 +21,30 @@ Lista criaLista(){
 }
 
 Lista appendLista(Lista lst, tdado dado){
+    //Criando a próxima lista
+    pnoh novoNo = (pnoh)malloc(sizeof(tnode));
+    novoNo -> proximo = NULL;
+    novoNo->dado = dado;
+
     if(lst->tamanho == 0){
-        pnoh novoNo = (pnoh)malloc(sizeof(tnode));
-        novoNo -> proximo = NULL;
-        novoNo->dado = dado;
+        //pnoh novoNo = (pnoh)malloc(sizeof(tnode));
+        //novoNo -> proximo = NULL;
+        //novoNo->dado = dado;
+
         lst->primeiro = novoNo;
         lst->ultimo = novoNo;
         lst->tamanho++;
     }
+    else {
+        //pnoh novoNo = (pnoh)malloc(sizeof(tnode));
+        //novoNo -> proximo = NULL;
+        //novoNo->dado = dado;
+
+        lst->ultimo->proximo = novoNo;
+        lst->ultimo = novoNo;
+    }
+
+    return lst;
 }
 int lenLista(Lista lst){
     return lst->tamanho;
